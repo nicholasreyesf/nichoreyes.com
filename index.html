@@ -1,29 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
-<title>Nicho Reyes – Portfolio</title>
+<title>Nicho Reyes</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-<h1>Nicho Reyes</h1>
-<p>Illustration & Concept Art</p>
-</header>
+<div class="container">
 
-<div class="grid">
+<div class="sidebar">
+<h2>Nicho Reyes</h2>
 
-<a href="projects/proyecto1.html" class="item">
-<img src="images/proyecto1.jpg">
-</a>
-
-<a href="projects/proyecto2.html" class="item">
-<img src="images/proyecto2.jpg">
-</a>
+<ul>
+<li onclick="showProject('p1')">Project One</li>
+<li onclick="showProject('p2')">Project Two</li>
+<li onclick="showProject('p3')">Project Three</li>
+</ul>
 
 </div>
+
+<div class="content">
+
+<div id="p1" class="project active">
+<img src="images/project1.jpg">
+</div>
+
+<div id="p2" class="project">
+<img src="images/project2.jpg">
+</div>
+
+<div id="p3" class="project">
+<img src="images/project3.jpg">
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function showProject(id){
+
+document.querySelectorAll(".project").forEach(p=>{
+p.classList.remove("active")
+})
+
+document.getElementById(id).classList.add("active")
+
+}
+
+</script>
 
 </body>
 </html>
