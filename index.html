@@ -8,50 +8,31 @@
 
 <body>
 
-<div class="container">
+<div class="layout">
 
-<div class="sidebar">
+<aside class="sidebar">
+
 <h2>Nicho Reyes</h2>
 
-<ul>
-<li onclick="showProject('p1')">Project One</li>
-<li onclick="showProject('p2')">Project Two</li>
-<li onclick="showProject('p3')">Project Three</li>
-</ul>
+<nav>
+
+<a href="projects/sentry.html">Sentry</a>
+<a href="projects/orbita.html">Orbita</a>
+<a href="projects/grafica.html">Grafica</a>
+<a href="projects/ohsome.html">Ohsome</a>
+
+</nav>
+
+</aside>
+
+<main class="content">
+
+<h1>Portfolio</h1>
+<p>Select a project from the left.</p>
+
+</main>
 
 </div>
-
-<div class="content">
-
-<div id="p1" class="project active">
-<img src="images/project1.jpg">
-</div>
-
-<div id="p2" class="project">
-<img src="images/project2.jpg">
-</div>
-
-<div id="p3" class="project">
-<img src="images/project3.jpg">
-</div>
-
-</div>
-
-</div>
-
-<script>
-
-function showProject(id){
-
-document.querySelectorAll(".project").forEach(p=>{
-p.classList.remove("active")
-})
-
-document.getElementById(id).classList.add("active")
-
-}
-
-</script>
 
 </body>
 </html>
